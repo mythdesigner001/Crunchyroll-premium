@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crunchyroll Premium: O Paraíso Otaku Te Espera! - OFERTA RELÂMPAGO!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600;700&family=Jost:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://www.crunchyroll.com/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%); /* Fundo mais suave e moderno */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+            position: relative;
+            overflow-x: hidden; /* Evita scroll horizontal */
+        }
+        /* Efeito de fundo sutil de animes/nuvens */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1579783900882-c24719e755b4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center center / cover no-repeat; /* Imagem de fundo sutil (ajuste ou substitua!) */
+            opacity: 0.05; /* Bem transparente */
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 900px; /* Um pouco mais largo */
+            margin: 25px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 20px; /* Bordas mais arredondadas */
+            box-shadow: 0 12px 35px rgba(0,0,0,0.25); /* Sombra mais marcante */
+            overflow: hidden;
+            position: relative;
+            border: 2px solid #FF8C00; /* Borda laranja sutil */
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(100deg, #FF6600 0%, #FFA500 100%); /* Gradiente mais suave */
+            padding: 50px 35px;
+            border-radius: 15px; /* Bordas mais suaves */
+            color: white;
+            text-align: center;
+            margin-bottom: 45px;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInScale 1.5s ease-out; /* Animação de entrada */
+        }
+        .header h1 {
+            font-family: 'Jost', sans-serif; /* Fonte mais moderna para o título */
+            font-size: 3.8rem; /* Título maior e mais impactante */
+            margin-bottom: 15px;
+            font-weight: 800; /* Mais negrito */
+            text-shadow: 4px 4px 8px rgba(0,0,0,0.4);
+            line-height: 1.1;
+        }
+        .header p {
+            font-size: 1.6rem; /* Subtítulo maior */
+            line-height: 1.6;
+            font-weight: 400;
+            opacity: 0.98;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        /* Elementos decorativos no header (estilo "manga panel") */
+        .header::before, .header::after {
+            content: '';
+            position: absolute;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            filter: blur(15px); /* Efeito de brilho */
+            opacity: 0.7;
+        }
+        .header::before {
+            top: -40px;
+            left: -40px;
+            width: 120px;
+            height: 120px;
+            animation: floatEffect 10s infinite alternate;
+        }
+        .header::after {
+            bottom: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            animation: floatEffect 12s infinite alternate-reverse;
+        }
+
+        /* Scarcity Section - Urgência e Exclusividade MELHORADA */
+        .scarcity-box {
+            background-image: linear-gradient(45deg, #ffdddd 0%, #ffe6e6 100%); /* Gradiente suave de fundo */
+            border: 4px solid #FF0000; /* Borda vermelha sólida e mais grossa */
+            color: #8B0000; /* Vermelho mais escuro para o texto principal */
+            padding: 25px 35px; /* Mais padding */
+            border-radius: 18px; /* Bordas mais arredondadas */
+            text-align: center;
+            font-size: 1.6rem; /* Fonte um pouco maior */
+            font-weight: 800; /* Mais negrito */
+            margin-bottom: 45px; /* Mais espaço abaixo */
+            animation: pulseWarning 1.2s infinite alternate; /* Animação de pulso */
+            box-shadow: 0 8px 25px rgba(255,0,0,0.4); /* Sombra mais destacada e vermelha */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.3;
+            text-transform: uppercase; /* Todo o texto em maiúsculas */
+            letter-spacing: 1.5px; /* Espaçamento entre as letras */
+            transform: scale(1.02) rotate(-1deg); /* Levemente maior e inclinado para destacar */
+            transition: transform 0.3s ease; /* Transição suave */
+        }
+        .scarcity-box:hover {
+            transform: scale(1.03) rotate(0deg); /* Volta ao normal no hover */
+        }
+        .scarcity-box span.icon-alert {
+            font-size: 2.8rem; /* Ícone ainda maior */
+            margin-right: 20px;
+            color: #FF4500; /* Laranja avermelhado vibrante */
+            animation: bounceIcon 0.8s infinite alternate;
+            text-shadow: 0 0 10px rgba(255,69,0,0.8); /* Brilho no ícone */
+        }
+        .scarcity-box strong {
+            color: #B22222; /* Vermelho fogo para o número de unidades */
+            font-size: 1.3em; /* Deixa o número ainda maior */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        /* Price Offer Section (AGORA UM BOTÃO CLICÁVEL!) */
+        .price-offer-button {
+            display: block; /* Para ocupar a largura total e ser um botão */
+            text-decoration: none; /* Remove sublinhado padrão de links */
+            background-image: linear-gradient(90deg, #4CAF50 0%, #689F38 100%); /* Verde mais rico e profundo */
+            color: white;
+            padding: 30px 40px; /* Mais preenchimento */
+            border-radius: 20px; /* Bordas mais arredondadas */
+            text-align: center;
+            margin-bottom: 45px; /* Mais espaço abaixo */
+            box-shadow: 0 10px 30px rgba(76, 175, 80, 0.6); /* Sombra mais intensa */
+            animation: breathing-pulse 3s infinite ease-in-out; /* Nova animação de respiração */
+            position: relative; /* Para elementos decorativos */
+            overflow: hidden; /* Para garantir que as decorações não vazem */
+            border: 3px solid #FFD700; /* Borda dourada para exclusividade */
+            cursor: pointer; /* Indica que é clicável */
+            outline: none; /* Remove contorno ao clicar */
+            transform: scale(1.02); /* Começa um pouco maior */
+            transition: all 0.3s ease;
+        }
+
+        .price-offer-button:hover {
+            transform: scale(1.03); /* Levemente maior no hover */
+            box-shadow: 0 15px 40px rgba(76, 175, 80, 0.7); /* Sombra mais forte no hover */
+        }
+
+        .price-offer-button:active {
+            transform: scale(0.99); /* Efeito de "clique" */
+            box-shadow: 0 5px 20px rgba(76, 175, 80, 0.5);
+        }
+
+        /* Efeito de Brilho no Hover */
+        .price-offer-button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.15); /* Brilho branco translúcido */
+            transform: skewX(-20deg); /* Angulação do brilho */
+            transition: all 0.5s ease-in-out;
+            pointer-events: none; /* Não interfere com o clique */
+        }
+
+        .price-offer-button:hover::after {
+            left: 100%; /* Move o brilho para a direita no hover */
+        }
+
+        .price-offer-button .offer-text {
+            font-size: 1.6rem; /* Um pouco maior */
+            font-weight: 600; /* Mais negrito */
+            margin-top: 0;
+            margin-bottom: 5px; /* Aproxima do preço */
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        .price-offer-button .original-price {
+            font-size: 2rem; /* Preço antigo maior */
+            text-decoration: line-through;
+            color: rgba(255, 255, 255, 0.8); /* Levemente transparente */
+            margin-right: 15px;
+            display: inline-block; /* Para centralização vertical */
+            vertical-align: middle;
+        }
+        .price-offer-button .new-price {
+            font-family: 'Jost', sans-serif;
+            font-size: 4.5rem; /* PREÇO GIGANTE! */
+            font-weight: 900;
+            display: inline-block;
+            line-height: 1;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.5); /* Sombra mais forte */
+            /* Gradiente de ouro para o texto do preço! */
+            background: -webkit-linear-gradient(left, #FFFF00, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .price-offer-button .new-price small {
+            font-size: 0.4em; /* Centavos um pouco menores */
+            vertical-align: super; /* Levanta os centavos */
+            -webkit-text-fill-color: #FFD700; /* Garante a cor amarela/ouro para os centavos */
+        }
+        .price-offer-button .limited-time {
+            font-size: 1.25rem; /* Um pouco maior */
+            font-weight: 800; /* Mais negrito */
+            margin-top: 25px; /* Mais espaço para separar */
+            background-color: #FF0000; /* Fundo vermelho de alerta */
+            padding: 8px 20px; /* Mais preenchimento */
+            border-radius: 8px;
+            display: inline-block;
+            text-transform: uppercase; /* Todo em maiúsculas */
+            letter-spacing: 1px; /* Leve espaçamento */
+            animation: pulseRed 1s infinite alternate; /* Animação de pulso */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            transform: skewX(-5deg); /* Leve inclinação */
+        }
+
+        /* Seção de Benefícios Atraente e Confortável */
+        .benefits-section {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+        .benefits-section h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #FF6600;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 700;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid; /* Layout em grade para mais organização */
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        .benefits-list li {
+            background: #fdfaf7; /* Fundo creme suave */
+            border-left: 8px solid #FF9933; /* Borda mais grossa */
+            padding: 20px 30px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            font-size: 1.25rem; /* Fonte maior */
+            font-weight: 400;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+            transition: all 0.3s ease;
+        }
+        .benefits-list li:hover {
+            transform: translateY(-7px) scale(1.01); /* Mais movimento no hover */
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            background-color: #fff9f2; /* Leve mudança de cor no hover */
+        }
+        .benefits-list li span.icon {
+            font-size: 2.2rem; /* Ícone ainda maior */
+            margin-right: 20px;
+            color: #FF6600;
+            flex-shrink: 0;
+            line-height: 1; /* Alinhamento vertical perfeito */
+        }
+        .benefits-list li strong {
+            font-weight: 700; /* Mais negrito */
+            color: #444;
+        }
+        .benefits-message {
+            text-align: center;
+            font-size: 1.4rem; /* Maior e mais convidativo */
+            margin-top: 40px;
+            font-weight: 500;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Seção de Depoimentos/Confiança */
+        .trust-section {
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #f7f9fc; /* Fundo suave para a seção de confiança */
+            border-radius: 15px;
+            box-shadow: inset 0 0 15px rgba(0,0,0,0.05); /* Sombra interna */
+            text-align: center;
+        }
+        .trust-section h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+        .testimonial {
+            background-color: #ffffff;
+            border-left: 5px solid #00bfff; /* Azul para "confiança" */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            font-style: italic;
+            color: #666;
+            text-align: left;
+            position: relative;
+        }
+        .testimonial::before {
+            content: '❝'; /* Aspas decorativas */
+            font-size: 3em;
+            color: #ddd;
+            position: absolute;
+            top: 5px;
+            left: 15px;
+            opacity: 0.3;
+            z-index: 0;
+        }
+        .testimonial p {
+            margin: 0;
+            padding-left: 40px; /* Espaço para as aspas */
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 1;
+        }
+        .testimonial .author {
+            font-weight: bold;
+            text-align: right;
+            margin-top: 10px;
+            color: #333;
+            font-style: normal;
+        }
+        .trust-icons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .trust-icons img {
+            height: 50px; /* Tamanho dos ícones de segurança/pagamento */
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        .trust-icons img:hover {
+            opacity: 1;
+        }
+
+        /* CTA Button */
+        .cta-button-wrapper {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(90deg, #FF4500 0%, #FF8C00 100%); /* Laranja mais intenso para o botão */
+            color: white;
+            text-decoration: none;
+            padding: 22px 45px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 1.6rem; /* Botão ainda maior */
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(255,69,0,0.5); /* Sombra mais vibrante */
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transform: scale(1); /* Para animação de clique */
+        }
+        .cta-button:hover {
+            background: linear-gradient(90deg, #FF8C00 0%, #FF4500 100%);
+            transform: translateY(-5px) scale(1.02); /* Mais movimento no hover */
+            box-shadow: 0 10px 40px rgba(255,69,0,0.7);
+        }
+        .cta-button:active {
+            transform: translateY(0px) scale(0.98); /* Efeito de "clique" */
+            box-shadow: 0 4px 15px rgba(255,69,0,0.3);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            font-size: 1rem;
+            color: #777;
+            margin-top: 45px;
+            border-top: 1px solid #e5e5e5;
+            padding-top: 30px;
+        }
+        .footer a {
+            color: #FF6600;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Popup de Alerta de Compra */
+        .purchase-alert-popup {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: rgba(0, 0, 0, 0.85);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: all 0.5s ease-in-out;
+            z-index: 1000;
+            font-size: 0.95rem;
+            max-width: 280px;
+            pointer-events: none; /* Permite clicar através do popup quando invisível */
+        }
+        .purchase-alert-popup.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .purchase-alert-popup .avatar {
+            width: 40px;
+            height: 40px;
+            background-color: #FF6600;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: white;
+            flex-shrink: 0;
+        }
+        .purchase-alert-popup .message strong {
+            color: #FFA500;
+        }
+
+        /* Animações */
+        @keyframes pulseWarning {
+            0% { transform: scale(1.02) rotate(-1deg); opacity: 1; }
+            50% { transform: scale(1.05) rotate(1deg); opacity: 0.95; } /* Pulso mais forte e leve rotação */
+            100% { transform: scale(1.02) rotate(-1deg); opacity: 1; }
+        }
+        @keyframes bounceIcon {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px) scale(1.1); } /* Salto com leve aumento */
+        }
+        @keyframes fadeInScale {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        @keyframes floatEffect {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(10px, -10px); }
+            100% { transform: translate(0, 0); }
+        }
+        /* Nova animação de "respiração" para o botão de preço */
+        @keyframes breathing-pulse {
+            0% { transform: scale(1.02); box-shadow: 0 10px 30px rgba(76, 175, 80, 0.6); }
+            50% { transform: scale(1.03); box-shadow: 0 15px 40px rgba(76, 175, 80, 0.8); }
+            100% { transform: scale(1.02); box-shadow: 0 10px 30px rgba(76, 175, 80, 0.6); }
+        }
+        /* Animação para a faixa vermelha de tempo limitado (melhorada) */
+        @keyframes pulseRed {
+            0% { background-color: #FF0000; box-shadow: 0 0 5px rgba(255,0,0,0.5); transform: skewX(-5deg) scale(1); }
+            50% { background-color: #CC0000; box-shadow: 0 0 18px rgba(255,0,0,0.9); transform: skewX(-5deg) scale(1.05); } /* Pulso mais forte */
+            100% { background-color: #FF0000; box-shadow: 0 0 5px rgba(255,0,0,0.5); transform: skewX(-5deg) scale(1); }
+        }
+
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                margin: 15px;
+                padding: 20px;
+                border-radius: 15px;
+            }
+            .header h1 {
+                font-size: 2.8rem;
+            }
+            .header p {
+                font-size: 1.3rem;
+            }
+            .scarcity-box {
+                font-size: 1.3rem; /* Ajustado para mobile */
+                padding: 20px 25px; /* Ajustado para mobile */
+                flex-direction: column; /* Empilha o texto e o ícone */
+                transform: scale(1) rotate(0deg); /* Menos inclinação em telas menores */
+            }
+            .scarcity-box span.icon-alert {
+                margin-bottom: 10px;
+                margin-right: 0;
+                font-size: 2.5rem; /* Ajustado para mobile */
+            }
+            .scarcity-box strong {
+                font-size: 1.1em; /* Ajustado para mobile */
+            }
+            .price-offer-button {
+                padding: 25px 30px; /* Ajuste para mobile */
+                transform: scale(1); /* Remove escala inicial em telas menores */
+                animation: none; /* Remove animação em telas menores para otimização */
+            }
+            .price-offer-button .original-price {
+                font-size: 1.5rem;
+            }
+            .price-offer-button .new-price {
+                font-size: 3.5rem; /* Ajuste para mobile */
+            }
+            .price-offer-button .new-price small {
+                 font-size: 0.45em; /* Ajuste para mobile */
+            }
+            .price-offer-button .offer-text {
+                font-size: 1.3rem; /* Ajuste para mobile */
+            }
+            .price-offer-button .limited-time {
+                font-size: 1.1rem; /* Ajuste para mobile */
+                padding: 6px 15px;
+                transform: skewX(0deg); /* Remove inclinação em mobile */
+            }
+            .price-offer-button:hover {
+                transform: scale(1.01); /* Levemente maior no hover para mobile */
+            }
+            .price-offer-button::after { /* Desabilita o brilho no hover para mobile */
+                display: none;
+            }
+            .benefits-section h2 {
+                font-size: 2rem;
+            }
+            .benefits-list li {
+                font-size: 1.1rem;
+                padding: 15px 20px;
+            }
+            .benefits-list li span.icon {
+                font-size: 1.8rem;
+                margin-right: 15px;
+            }
+            .benefits-message {
+                font-size: 1.2rem;
+            }
+            .trust-section h3 {
+                font-size: 1.8rem;
+            }
+            .testimonial p {
+                font-size: 1rem;
+            }
+            .trust-icons {
+                flex-wrap: wrap; /* Quebra linha se houver muitos ícones */
+                gap: 20px;
+            }
+            .trust-icons img {
+                height: 40px;
+            }
+            .cta-button {
+                padding: 18px 35px;
+                font-size: 1.4rem;
+            }
+            .purchase-alert-popup {
+                left: 50%;
+                transform: translateX(-50%);
+                width: 90%;
+                max-width: 90%;
+                bottom: 15px;
+                gap: 10px;
+            }
+            .purchase-alert-popup.show {
+                transform: translateX(-50%);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            .header p {
+                font-size: 1rem;
+            }
+            .scarcity-box {
+                font-size: 1.1rem;
+                padding: 15px 20px;
+            }
+            .scarcity-box span.icon-alert {
+                font-size: 2.2rem;
+            }
+            .price-offer-button {
+                padding: 20px 25px; /* Ajuste para mobile menor */
+            }
+            .price-offer-button .original-price {
+                font-size: 1.3rem;
+            }
+            .price-offer-button .new-price {
+                font-size: 3.2rem; /* Ajuste para mobile menor */
+            }
+            .price-offer-button .offer-text {
+                font-size: 1.1rem;
+            }
+            .price-offer-button .limited-time {
+                font-size: 1rem;
+                padding: 5px 12px;
+            }
+            .benefits-section h2 {
+                font-size: 1.6rem;
+            }
+            .benefits-list li {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 12px 15px;
+                font-size: 0.95rem;
+                text-align: left;
+            }
+            .benefits-list li span.icon {
+                margin-bottom: 8px;
+                margin-right: 0;
+            }
+            .benefits-message {
+                font-size: 1rem;
+            }
+            .trust-section h3 {
+                font-size: 1.5rem;
+            }
+            .testimonial p {
+                font-size: 0.9rem;
+            }
+            .cta-button {
+                padding: 15px 25px;
+                font-size: 1.2rem;
+            }
+            .purchase-alert-popup {
+                font-size: 0.85rem;
+                padding: 10px 15px;
+            }
+            .purchase-alert-popup .avatar {
+                width: 30px;
+                height: 30px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>🌸 Crunchyroll Premium: Seu Isekai Começa Agora! 🌸</h1>
+            <p>Diga adeus aos fillers e mergulhe de cabeça no universo do anime! Assista tudo, do Japão direto para sua tela, sem anúncios e com a qualidade que você merece.</p>
+        </div>
+
+        <div class="scarcity-box">
+            <span class="icon-alert">🔥</span>
+            ALERTA OTAKU: Restam **APENAS 34 UNIDADES** de Contas Premium! Não perca seu portal para o mundo do anime, elas voam como um shuriken!
+        </div>
+
+        <a href="#ctaButtonSection" class="price-offer-button">
+            <p class="offer-text">De <span class="original-price">R$ 35,00</span></p>
+            <p class="new-price">Por APENAS R$ 7<small>,00</small>!</p>
+            <p class="limited-time">OFERTA POR TEMPO LIMITADO!</p>
+        </a>
+
+        <div class="benefits-section">
+            <h2>O Que Espera por Você no Mundo Premium:</h2>
+
+            <ul class="benefits-list">
+                <li>
+                    <span class="icon">⚡</span>
+                    <strong>Ativação Instantânea (Kage Bunshin no Jutsu!):</strong> Sua conta Premium é liberada em minutos após a confirmação. Comece a assistir antes mesmo de terminar sua pose de jutsu!
+                </li>
+                <li>
+                    <span class="icon">👑</span>
+                    <strong>Um Mês de Realeza Otaku:</strong> 30 dias completos de acesso garantido, sem interrupções. Seu reinado no mundo do anime sem preocupações!
+                </li>
+                <li>
+                    <span class="icon">🇯🇵</span>
+                    <strong>Simulcast Direto do Japão:</strong> Assista aos episódios novos poucas horas depois da exibição no Japão, com legendas perfeitas ou dublagem impecável. Sem spoilers, só emoção!
+                </li>
+                <li>
+                    <span class="icon">🚫</span>
+                    <strong>Adeus Anúncios (Nem um "Dango" vai te atrapalhar!):</strong> Mergulhe fundo na história sem interrupções irritantes. Sua imersão total garantida!
+                </li>
+                <li>
+                    <span class="icon">✨</span>
+                    <strong>Qualidade Full HD e Offline:</strong> A melhor imagem e a opção de baixar seus episódios favoritos para assistir offline. Perfeito para sua jornada longe do Wi-Fi!
+                </li>
+                <li>
+                    <span class="icon">📺</span>
+                    <strong>Assista em Todos os Seus Dispositivos:</strong> Do celular à smart TV, passando pelo PC e console. Sua maratona segue você para qualquer dimensão!
+                </li>
+            </ul>
+
+            <p class="benefits-message">Não perca essa chance de viver o anime como ele realmente foi feito para ser! É só clicar e começar sua aventura!</p>
+
+            <div class="cta-button-wrapper" id="ctaButtonSection">
+                <a href="https://dfg.com.br/comprar-crunchyroll" target="_blank" class="cta-button">
+                    LIBERAR MEU MODO PREMIUM AGORA!
+                </a>
+            </div>
+        </div>
+
+        ---
+
+        <div class="trust-section">
+            <h3>Nossos Fãs Já Estão Maratoninando! <br> (Sua Satisfação é Nosso Mangekyou Sharingan!)</h3>
+
+            <div class="testimonial">
+                <p>"Comprei e recebi em 5 minutos! Pude ver o episódio novo de Jujutsu em Full HD sem travar, é perfeito! Recomendo muito!"</p>
+                <div class="author">- Kenji, Fã de Shonen</div>
+            </div>
+
+            <div class="testimonial">
+                <p>"Eu estava cansada dos anúncios, essa conta Premium mudou minha vida otaku! Agora consigo maratonar sem interrupções. Senti um alívio enorme!"</p>
+                <div class="author">- Akemi, Amante de Slice of Life</div>
+            </div>
+
+            <div class="testimonial">
+                <p>"Processo super rápido e seguro, tive total confiança. Finalmente posso assistir meus animes favoritos na TV sem problemas!"</p>
+                <div class="author">- Hiroshi, Colecionador de Figuras</div>
+            </div>
+
+            <div class="trust-icons">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/960px-Visa_Inc._logo.svg.png" alt="Visa" title="Aceitamos Visa">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/2000px-Mastercard-logo.svg.png" alt="Mastercard" title="Aceitamos Mastercard">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Logo%E2%80%94pix_powered_by_Banco_Central_%28Brazil%2C_2020%29.svg" alt="PIX" title="Aceitamos PIX">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/SSL_Secured_Blue.svg/2000px-SSL_Secured_Blue.svg.png" alt="Pagamento Seguro" title="Pagamento Seguro SSL">
+            </div>
+            <p style="font-size: 0.95rem; margin-top: 20px; color: #777;">Pagamento seguro e protegido por <a href="#" style="color: #FF6600;">SSL</a>.</p>
+        </div>
+
+        <div class="footer">
+            © 2025 DFG.com.br - Todos os direitos reservados.
+            <br>Sua jornada otaku é nossa prioridade. Conte conosco!
+            <br><a href="#" target="_blank">Termos de Uso</a> | <a href="#" target="_blank">Política de Privacidade</a>
+        </div>
+    </div>
+
+    <div id="purchaseAlert" class="purchase-alert-popup">
+        <div class="avatar" id="avatarInitials"></div>
+        <div class="message">
+            <span id="buyerName"></span> acabou de comprar <strong>Crunchyroll Premium!</strong>
+        </div>
+    </div>
+
+    <script>
+        // Array de nomes aleatórios de brasileiros
+        const names = [
+            "Ana C.", "João P.", "Maria S.", "Pedro L.", "Julia M.",
+            "Lucas F.", "Beatriz N.", "Gabriel V.", "Isabela R.", "Rafael G.",
+            "Mariana B.", "Guilherme D.", "Fernanda C.", "Bruno A.", "Larissa H.",
+            "Diego P.", "Amanda J.", "Vitor O.", "Camila K.", "Rodrigo W."
+        ];
+
+        // Função para obter iniciais
+        function getInitials(name) {
+            const parts = name.split(' ');
+            if (parts.length === 1) {
+                return parts[0].substring(0, 2).toUpperCase();
+            }
+            return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+        }
+
+        // Função para mostrar o pop-up de alerta de compra
+        function showPurchaseAlert() {
+            const popup = document.getElementById('purchaseAlert');
+            const buyerNameElement = document.getElementById('buyerName');
+            const avatarInitialsElement = document.getElementById('avatarInitials');
+
+            // Escolhe um nome aleatório
+            const randomName = names[Math.floor(Math.random() * names.length)];
+            const initials = getInitials(randomName);
+
+            // Atualiza o conteúdo do pop-up
+            buyerNameElement.textContent = randomName;
+            avatarInitialsElement.textContent = initials;
+
+            // Mostra o pop-up
+            popup.classList.add('show');
+
+            // Esconde o pop-up depois de 6 segundos
+            setTimeout(() => {
+                popup.classList.remove('show');
+            }, 6000);
+
+            // Agenda o próximo pop-up entre 10 e 25 segundos
+            const nextAlertTime = Math.random() * (25000 - 10000) + 10000; // entre 10 e 25 segundos
+            setTimeout(showPurchaseAlert, nextAlertTime);
+        }
+
+        // Inicia o primeiro pop-up depois de um pequeno delay
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(showPurchaseAlert, 3000); // Mostra o primeiro pop-up 3 segundos após o carregamento
+
+            // Smooth scroll para o botão de CTA ao clicar no botão de preço
+            const priceButton = document.querySelector('.price-offer-button');
+            priceButton.addEventListener('click', function(e) {
+                e.preventDefault(); // Impede o comportamento padrão do link
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center' // Rola para o centro da tela
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
